@@ -17,7 +17,8 @@
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "google"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -35,7 +36,8 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "indent": ["error", 2]
       }
     },
     {
@@ -47,5 +49,12 @@
       ],
       "rules": {}
     }
-  ]
+  ],
+  "rules": {
+    "new-cap": [0, { "capIsNewExceptions": [
+      "NgModule",
+      "Component"
+      ] 
+    }]
+  }
 }
