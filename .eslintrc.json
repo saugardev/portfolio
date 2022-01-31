@@ -53,7 +53,8 @@
   "rules": {
     "new-cap": [0, { "capIsNewExceptions": [
       "NgModule",
-      "Component"
+      "Component",
+      "Injectable"
       ] 
     }]
   }
