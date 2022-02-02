@@ -16,15 +16,22 @@
         height: 3rem;
         margin-left: 1.5rem;
         color: var(--text-white);
-
+        transition: 0.2s color;
+        
         &:hover {
+            transition: 0.5s;
             color: var(--text-hover);
         }
     }
 
+    * .section-number {
+        color: var(--text-hover);
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+
     & p {
         display: block;
-        text-transform: uppercase;
         text-align: center;
     }
 }
