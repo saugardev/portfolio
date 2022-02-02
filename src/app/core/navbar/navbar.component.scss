@@ -1,0 +1,30 @@
+.navbar {
+    position: fixed;
+    right: 30px;
+    top: 1.5rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-blue);
+    padding-right: 1.5rem;
+    -webkit-clip-path: polygon(0 calc(100% - 0.75rem),0 0,calc(100% - 0.75rem) 0,100% 0.75rem,100% 100%,0.75rem 100%);
+    clip-path: polygon(0 calc(100% - 0.75rem),0 0,calc(100% - 0.75rem) 0,100% 0.75rem,100% 100%,0.75rem 100%);
+
+    & a {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        margin-left: 1.5rem;
+        color: var(--text-white);
+
+        &:hover {
+            color: var(--text-hover);
+        }
+    }
+
+    & p {
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
