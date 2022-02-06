@@ -1,12 +1,12 @@
-.email-container {
+.links-container {
   position: fixed;
   bottom: 0px;
-  right: 5rem;
+  left: 5rem;
   box-sizing: inherit;
   display: block;
   font-weight: 00;
 
-  & .email {
+  & .links {
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
@@ -15,25 +15,31 @@
     color: var(--text-grey);
     margin: 0;
 
-    & a {
-      margin: 20px auto;
-      padding: 10px;
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.1em;
-      writing-mode: vertical-rl;
+    & li {
+      height: 50px;
       transition: var(--transition);
+      & a {
+        padding-top: 10px;
+        transition: var(--transition);
+        fill: var(--text-grey);
+          
+        & svg {
+          height: 24px;
+          width: 24px;
+        }
+  
+        &:hover {
+          padding-top: 7px;
+          fill: var(--main-blue);
+          transition: var(--transition);
+        }
+      }
     }
 
-    & :hover {
-      font-size: 14.2px;
-      color: var(--main-blue);
-      transition: var(--transition);
-    }
-    
     &::after {
       content: "";
       display: block;
+      margin-top: 15px;
       width: 1px;
       height: 80px;
       background-color: var(--text-grey);
@@ -42,7 +48,8 @@
 }
 
 @media (max-width: 1080px) {
-  .email-container {
-    right: 2rem;;
+  .links-container {
+    left: 2rem;
+    ;
   }
 }

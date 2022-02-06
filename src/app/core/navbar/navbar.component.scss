@@ -1,37 +1,37 @@
 .navbar {
-    position: fixed;
-    right: 4rem;
-    top: 1.5rem;
+  position: fixed;
+  right: 4rem;
+  top: 1.5rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--main-blue);
+  padding-right: 1.5rem;
+  -webkit-clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
+  clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
+
+  & a {
+    cursor: pointer;
     display: flex;
     align-items: center;
-    background-color: var(--main-blue);
-    padding-right: 1.5rem;
-    -webkit-clip-path: polygon(0 calc(100% - 0.75rem),0 0,calc(100% - 0.75rem) 0,100% 0.75rem,100% 100%,0.75rem 100%);
-    clip-path: polygon(0 calc(100% - 0.75rem),0 0,calc(100% - 0.75rem) 0,100% 0.75rem,100% 100%,0.75rem 100%);
+    height: 3rem;
+    margin-left: 1.5rem;
+    color: var(--text-white);
+    transition: 0.2s color;
 
-    & a {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        height: 3rem;
-        margin-left: 1.5rem;
-        color: var(--text-white);
-        transition: 0.2s color;
-        
-        &:hover {
-            transition: var(--transition);
-            color: var(--text-hover);
-        }
+    &:hover {
+      transition: var(--transition);
+      color: var(--text-hover);
     }
+  }
 
-    * .section-number {
-        color: var(--text-hover);
-        font-size: 0.9rem;
-        margin-right: 0.5rem;
-    }
+  * .section-number {
+    color: var(--text-hover);
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
 
-    & p {
-        display: block;
-        text-align: center;
-    }
+  & p {
+    display: block;
+    text-align: center;
+  }
 }
