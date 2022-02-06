@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    right: 30px;
+    right: 4rem;
     top: 1.5rem;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
         transition: 0.2s color;
         
         &:hover {
-            transition: 0.5s;
+            transition: var(--transition);
             color: var(--text-hover);
         }
     }

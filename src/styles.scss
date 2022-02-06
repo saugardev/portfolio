@@ -6,7 +6,9 @@ $roboto-font-path: "~roboto-fontface/fonts" !default;
 :root {
     --main-blue: #0e1e49;
 	--text-white: #ffffffea;
+	--text-grey: rgb(140, 146, 172);
 	--text-hover: #0bffbf;
+	--transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -58,9 +60,11 @@ table {
 	border-spacing: 0;
 }
 a {
-	text-decoration: none;
-	padding: 0;
-	margin: 0;
+	display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
 }
 * {
 	font-family: "Roboto-Regular";
