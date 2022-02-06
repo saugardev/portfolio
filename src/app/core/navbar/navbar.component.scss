@@ -4,10 +4,10 @@
   top: 1.5rem;
   display: flex;
   align-items: center;
-  background-color: var(--main-blue);
   padding-right: 1.5rem;
-  -webkit-clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
-  clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
+  // -webkit-clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
+  // clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
+  counter-reset: menu-number;
 
   & a {
     cursor: pointer;
@@ -15,19 +15,23 @@
     align-items: center;
     height: 3rem;
     margin-left: 1.5rem;
-    color: var(--text-white);
+    color: var(--text-dark-blue);
     transition: 0.2s color;
+    font-family: 'SF Mono', monospace;
+    font-weight: 500;
+    font-size: 14px;
 
     &:hover {
       transition: var(--transition);
-      color: var(--text-hover);
+      color: var(--text-grey);
     }
-  }
 
-  * .section-number {
-    color: var(--text-hover);
-    font-size: 0.9rem;
-    margin-right: 0.5rem;
+    &::before {
+      content: "0"counter(menu-number)".";
+      counter-increment: menu-number;
+      color: var(--text-grey);
+      margin-right: 0.5rem;
+    }
   }
 
   & p {

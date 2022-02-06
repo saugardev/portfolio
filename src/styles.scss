@@ -2,13 +2,14 @@
 
 $roboto-font-path: "~roboto-fontface/fonts" !default;
 @import "~roboto-fontface/css/roboto/sass/roboto-fontface";
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
 
 :root {
-    --main-blue: #0e1e49;
+    --text-dark-blue: #0e1e49;
 	--text-white: #ffffffea;
 	--text-grey: rgb(140, 146, 172);
-	--text-hover: #0bffbf;
 	--transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+	--font-mono: 'SF Mono', Courier, monospace
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -68,4 +69,5 @@ a {
 }
 * {
 	font-family: "Roboto-Regular";
+	font-family: 'Courier New', Courier, monospace;
 }
