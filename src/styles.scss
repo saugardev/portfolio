@@ -6,11 +6,14 @@
 
 
 :root {
-    --text-dark-blue: #0e1e49;
+    --text-dark-blue: #020c1b;
 	--text-white: #ffffffea;
 	--text-grey: rgb(140, 146, 172);
+	--text-dark-grey: rgb(96, 101, 126);
 	--transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-	--font-mono: 'SF Mono', Courier, monospace
+
+	--font-mono: 'SF Mono', Courier, monospace;
+	--font-sans: "Inter";
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -69,5 +72,5 @@ a {
     position: relative;
 }
 * {
-	font-family: "Inter";
+	font-family: var(--font-sans);
 }

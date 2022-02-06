@@ -1,0 +1,43 @@
+.title {
+  font-weight: 900;
+  font-size: clamp(56px, 11vw, 64px);
+  font-family: var(--font-sans);
+  color: var(--text-dark-blue);
+  line-height: 110%;
+  letter-spacing: -0.1rem;
+  text-align: left;
+  width: 65%;
+}
+
+
+@media (max-width: 900px) {
+  .title {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    width: 100%;
+  }
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.08rem;
+  color: var(--text-dark-grey);
+  margin: 0.5rem 0.2rem;
+}
+
+.content {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--text-dark-grey);
+  margin: 0.5rem 0.2rem;
+}
+
+.title-label {
+  margin-left: 0.2rem;
+  font-family: var(--font-mono);
+}
