@@ -50,6 +50,11 @@
 @media (max-width: 1080px) {
   .links-container {
     left: 2rem;
-    ;
+  }
+}
+
+@media (max-width: 600px) {
+  .links-container {
+    display: none;
   }
 }

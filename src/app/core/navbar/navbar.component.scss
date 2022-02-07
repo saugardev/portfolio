@@ -18,7 +18,7 @@
     transition: 0.2s color;
     font-family: 'SF Mono', monospace;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
 
     &:hover {
       transition: var(--transition);
@@ -41,7 +41,7 @@
   &:after {
     content: "";
     position: fixed;
-    right: 4rem;
+    right: 5rem;
     height: 1px;
     width: 80px;
     background-color: var(--text-grey);
