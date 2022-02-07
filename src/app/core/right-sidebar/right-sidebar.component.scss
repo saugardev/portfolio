@@ -46,3 +46,9 @@
     right: 2rem;;
   }
 }
+
+@media (max-width: 600px) {
+  .email-container {
+    display: none;
+  }
+}
