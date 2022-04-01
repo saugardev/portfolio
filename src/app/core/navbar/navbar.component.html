@@ -1,17 +1,7 @@
 <div class="navbar">
-  <div>
-    <a>
-      <p>About</p>
-    </a>
-  </div>
-  <div>
-    <a>
-      <p>Experience</p>
-    </a>
-  </div>
-  <div>
-    <a>
-      <p>Contact</p>
+  <div *ngFor="let link of links">
+    <a [href]="link.url">
+      <p>{{link.tag}}</p>
     </a>
   </div>
 </div>
