@@ -30,7 +30,7 @@
   margin: 0.5rem 0.2rem;
 }
 
-.content {
+.subtitle2 {
   font-weight: 500;
   font-size: clamp(14.375px, 3.47vw, 20px);
   color: var(--text-dark-grey);
@@ -41,4 +41,87 @@
   font-size: clamp(11.5px, 2.75vw, 16px);
   margin-left: 0.2rem;
   font-family: var(--font-mono);
+}
+
+.spacer {
+  margin-bottom: 5rem;
+}
+
+.vertical-display {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  top: 0px;
+  width:100%;
+}
+
+.vertical-line {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  height: 650px;
+  width: 1px;
+  background-color: var(--text-grey);
+  z-index: 0;
+}
+
+.first {
+  margin-top: 50px;
+}
+
+.vertical-label {
+  z-index: 1;
+  padding: 5px;
+  margin-bottom: 125px;
+  border-radius: 10px;
+  border: 1px solid var(--text-dark-grey);
+  background-color: white;
+  color: var(--text-blue-grey);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  cursor: default;
+
+  &::before {
+    content: "#";
+  }
+}
+
+.cards-wrap {
+  position: absolute;
+  width: 90%;
+  top: 10px;
+
+  & .card {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    margin-bottom: 45px;
+
+    & .left,
+    & .right {
+      position: absolute;
+      width: 35%;
+      height: 100%;
+      border: 1px solid var(--text-dark-grey);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > * {
+        text-align: center;
+      }
+    }
+
+    & .left {
+    }
+
+    & .right {
+      right: 0;
+    }
+  }
+  
 }
