@@ -115,7 +115,7 @@
         content: "";
         height: 1px;
         background-color: var(--text-dark-blue);
-        width: 100%;
+        width: calc(100% + 1px);
         margin-top: 25px;
       }
 
