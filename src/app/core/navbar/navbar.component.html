@@ -1,7 +1,9 @@
-<div class="navbar">
-  <div *ngFor="let link of links">
-    <a [href]="link.url">
-      <p>{{link.tag}}</p>
-    </a>
+<div class="navbar-wrap">
+  <div class="navbar">
+    <div *ngFor="let link of links">
+      <a [href]="link.url">
+        <p>{{link.tag}}</p>
+      </a>
+    </div>
   </div>
 </div>

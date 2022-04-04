@@ -1,11 +1,18 @@
+.navbar-wrap {
+  position: fixed;
+  width: 100%;
+  height: 71px;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+}
+
 .navbar {
   position: fixed;
   right: 5rem;
   top: 1.5rem;
   display: flex;
   align-items: flex-end;
-  // -webkit-clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
-  // clip-path: polygon(0 calc(100% - 0.75rem), 0 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% 100%, 0.75rem 100%);
   counter-reset: menu-number;
 
   & a {
