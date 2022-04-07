@@ -3,7 +3,7 @@ export const environment = {
   NAVBAR_LINKS: [
     {
       tag: 'About',
-      url: '#about',
+      url: 'about',
     },
     {
       tag: 'Experience',

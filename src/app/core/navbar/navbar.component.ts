@@ -1,3 +1,4 @@
+import {ViewportScroller} from '@angular/common';
 import {Component} from '@angular/core';
 import {environment} from 'src/environments/environment';
 
@@ -29,7 +30,15 @@ export class NavbarComponent {
   /**
    * NavbarComponent constructor
    */
-  constructor() {
+  constructor(private viewportScroller: ViewportScroller) {
     this._links = environment.NAVBAR_LINKS;
+  }
+
+  /**
+   * Scrolls to clicked section
+   * @param {string} elementId Scroll target element id
+   */
+  public goToSection(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 }

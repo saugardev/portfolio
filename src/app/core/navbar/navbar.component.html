@@ -1,7 +1,7 @@
 <div class="navbar-wrap">
   <div class="navbar">
     <div *ngFor="let link of links">
-      <a [href]="link.url">
+      <a (click)="goToSection(link.url)">
         <p>{{link.tag}}</p>
       </a>
     </div>
