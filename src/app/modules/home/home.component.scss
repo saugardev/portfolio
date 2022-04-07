@@ -33,8 +33,8 @@
   &::before {
     content:"";
     display:block;
-    height: 180px; /* fixed header height*/
-    margin:-180px 0 0; /* negative fixed header height */
+    height: 110px; /* fixed header height*/
+    margin:-110px 0 0; /* negative fixed header height */
   }
 }
 
@@ -60,4 +60,7 @@
 
 .spacer {
   margin-bottom: 5rem;
+}
+.spacer-s {
+  margin-bottom: 2.5rem;
 }
