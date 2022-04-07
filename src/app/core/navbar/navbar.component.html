@@ -1,4 +1,7 @@
 <div class="navbar-wrap">
+  <a (click)="goToTop()">
+    <img src="assets/saugarces/android-chrome-192x192.png" alt="Logo">
+  </a>
   <div class="navbar">
     <div *ngFor="let link of links">
       <a (click)="goToSection(link.url)">

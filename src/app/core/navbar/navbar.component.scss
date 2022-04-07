@@ -1,3 +1,7 @@
+a {
+  cursor: pointer;
+}
+
 .navbar-wrap {
   position: sticky;
   width: 100%;
@@ -16,7 +20,6 @@
   counter-reset: menu-number;
 
   & a {
-    cursor: pointer;
     display: flex;
     align-items: center;
     height: 3rem;
@@ -53,4 +56,11 @@
     width: 80px;
     background-color: var(--text-grey);
   }
+}
+
+img {
+  position: fixed;
+  height: 40px;
+  left: 5rem;
+  top: 1.5rem;
 }

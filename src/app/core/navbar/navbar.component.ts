@@ -41,4 +41,11 @@ export class NavbarComponent {
   public goToSection(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
   }
+
+  /**
+   * Scrolls to the top
+   */
+  public goToTop(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 }
