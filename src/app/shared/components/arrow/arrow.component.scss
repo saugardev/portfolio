@@ -1,0 +1,43 @@
+.next-section {
+    & > div {
+      margin-left: 20px;
+      transform: translate(-50%,-50%) rotate(90deg);
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+      transition: 0.2s transform;
+  
+      &:hover {
+        transition: var(--transition);
+        transform: translate(-50%,-20%) rotate(90deg);
+      }
+    }
+    
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    height: 1px;
+    background-color: var(--text-dark-grey);
+  }
+  
+  .arrow::after, .arrow::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    right: -4px;
+    background-color: var(--text-dark-grey);
+  }
+  
+  .arrow::after {
+    top: -8px;
+    transform: rotate(45deg);
+  }
+  
+  .arrow::before {
+    top: 8px;
+    transform: rotate(-45deg);
+  }
