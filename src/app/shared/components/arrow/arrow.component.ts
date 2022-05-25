@@ -1,5 +1,5 @@
-import {ViewportScroller} from '@angular/common';
 import {Component, Input} from '@angular/core';
+import {ViewportService} from 'src/app/core/services/viewport.service';
 
 @Component({
   selector: 'app-arrow',
@@ -19,7 +19,7 @@ export class ArrowComponent {
    * ArrowComponent constructor
    * @param {ViewportScroller} viewportScroller scroller instance
    */
-  constructor(private viewportScroller: ViewportScroller) {
+  constructor(private viewportService: ViewportService) {
     this.sectionId = '';
   }
 
@@ -28,7 +28,7 @@ export class ArrowComponent {
    */
   public goToSection() {
     this.sectionId === ''
-      ? this.viewportScroller.scrollToPosition([0, 0])
-      : this.viewportScroller.scrollToAnchor(this.sectionId);
+      ? this.viewportService.scrollToPosition([0, 0])
+      : this.viewportService.scrollToAnchor(this.sectionId);
   }
 }

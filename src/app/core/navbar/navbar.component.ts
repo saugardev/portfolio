@@ -1,6 +1,6 @@
-import {ViewportScroller} from '@angular/common';
 import {Component} from '@angular/core';
 import {environment} from 'src/environments/environment';
+import {ViewportService} from '../services/viewport.service';
 
 type link = {
   tag: string;
@@ -30,7 +30,7 @@ export class NavbarComponent {
   /**
    * NavbarComponent constructor
    */
-  constructor(private viewportScroller: ViewportScroller) {
+  constructor(private viewportService: ViewportService) {
     this._links = environment.NAVBAR_LINKS;
   }
 
@@ -39,13 +39,13 @@ export class NavbarComponent {
    * @param {string} elementId Scroll target element id
    */
   public goToSection(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
+    this.viewportService.scrollToAnchor(elementId);
   }
 
   /**
    * Scrolls to the top
    */
   public goToTop(): void {
-    this.viewportScroller.scrollToPosition([0, 0]);
+    this.viewportService.scrollToPosition([0, 0]);
   }
 }

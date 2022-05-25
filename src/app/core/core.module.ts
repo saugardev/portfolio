@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {NavbarComponent} from './navbar/navbar.component';
 import {RightSidebarComponent} from './right-sidebar/right-sidebar.component';
 import {LeftSidebarComponent} from './left-sidebar/left-sidebar.component';
+import {ViewportService} from './services/viewport.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,9 @@ import {LeftSidebarComponent} from './left-sidebar/left-sidebar.component';
     NavbarComponent,
     RightSidebarComponent,
     LeftSidebarComponent,
+  ],
+  providers: [
+    ViewportService,
   ],
 })
 /**
