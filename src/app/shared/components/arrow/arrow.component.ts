@@ -10,7 +10,6 @@ import {Component, Input} from '@angular/core';
  * ArrowComponent class
  */
 export class ArrowComponent {
-
   /**
    * Target section's id CSS Selector
    */
@@ -25,10 +24,10 @@ export class ArrowComponent {
   }
 
   /**
-   * Scrolls to section if sectionId is 
+   * Scrolls to section sectionId or scrolls to top when empty
    */
   public goToSection() {
-    this.sectionId === '' 
+    this.sectionId === ''
       ? this.viewportScroller.scrollToPosition([0, 0])
       : this.viewportScroller.scrollToAnchor(this.sectionId);
   }
