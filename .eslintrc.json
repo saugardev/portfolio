@@ -54,7 +54,8 @@
     "new-cap": [0, { "capIsNewExceptions": [
       "NgModule",
       "Component",
-      "Injectable"
+      "Injectable",
+      "Input",
       ] 
     }]
   }
