@@ -7,11 +7,11 @@ export const environment = {
     },
     {
       tag: 'Experience',
-      url: '#experience',
+      url: 'experience',
     },
     {
       tag: 'Contact',
-      url: '#contact',
+      url: 'contact',
     },
   ],
   production: true,

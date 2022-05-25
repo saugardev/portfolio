@@ -9,7 +9,6 @@
   width: 65%;
 }
 
-
 @media (max-width: 900px) {
   .title {
     width: 80%;
@@ -28,8 +27,7 @@
   letter-spacing: -0.08rem;
   color: var(--text-dark-grey);
   margin: 0.5rem 0.2rem;
-  
-  
+
   &::before {
     content:"";
     display:block;
@@ -63,4 +61,55 @@
 }
 .spacer-s {
   margin-bottom: 2.5rem;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow: auto;
+  margin-top: 10vh;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-grey) transparent;
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #908d91;
+    border-radius: 8px;
+    border: 1px none #ffffff;
+  }
+}
+
+.arrow-spacer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+
+  & .center {
+    margin-left: 18px;
+  }
+
+  app-arrow + app-arrow, & .reverse {
+    transform: rotate(180deg) translateY(30px);
+  }
+
+  & .reverse {
+    margin-right: 18px;
+  }
 }
