@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
+import {ViewportService} from './core/services/viewport.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,17 @@ import {Component} from '@angular/core';
  * Root Angular component
  */
 export class AppComponent {
-  title = 'portfolio';
+  /**
+   * A
+   * @param {any} event
+   */
+  @HostListener('mousewheel', ['$event']) onMousewheel(event: WheelEvent) {
+    this.viewportService.addEvent(event);
+  }
+
+  /**
+   * AppComponent constructor
+   * @param {ViewportService} viewportService
+   */
+  constructor(private viewportService: ViewportService) {}
 }
