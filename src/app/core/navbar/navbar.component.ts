@@ -1,6 +1,10 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {environment} from 'src/environments/environment';
 import {ViewportService} from '../services/viewport.service';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 type link = {
   tag: string;
@@ -14,7 +18,17 @@ type link = {
 /**
  * NavbarComponent class
  */
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+  /**
+   * Logo element
+   */
+  @ViewChild('logo', {static: true}) logo: ElementRef<HTMLDivElement>;
+
+  /**
+   * Navbar container element
+   */
+  @ViewChild('navbar', {static: true}) navbar: ElementRef<HTMLDivElement>;
+
   /**
    * Array of links
    */
@@ -32,6 +46,27 @@ export class NavbarComponent {
    */
   constructor(private viewportService: ViewportService) {
     this._links = environment.NAVBAR_LINKS;
+  }
+
+  /**
+   * NavbarComponent ngOnInit hook
+   */
+  ngOnInit(): void {
+    gsap.from(this.logo.nativeElement, {
+      duration: 0.4,
+      opacity: 0,
+      y: -20,
+      stagger: 0.2,
+      delay: 0.5,
+    });
+
+    gsap.from(this.navbar.nativeElement.childNodes, {
+      duration: 0.4,
+      opacity: 0,
+      y: -20,
+      stagger: 0.2,
+      delay: 0.75,
+    });
   }
 
   /**

@@ -58,7 +58,8 @@
       "Component",
       "Injectable",
       "Input",
-      "HostListener"
+      "HostListener",
+      "ViewChild"
       ] 
     }]
   }

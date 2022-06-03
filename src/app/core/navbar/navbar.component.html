@@ -1,11 +1,26 @@
 <div class="navbar-wrap">
-  <a (click)="goToTop()">
+  <a (click)="goToTop()" #logo>
     <img src="assets/saugarces/android-chrome-192x192.png" alt="Logo">
   </a>
-  <div class="navbar">
-    <div *ngFor="let link of links">
+  <div class="navbar"#navbar>
+    <!-- <div *ngFor="let link of links">
       <a (click)="goToSection(link.url)">
         <p>{{link.tag}}</p>
+      </a>
+    </div> -->
+    <div>
+      <a (click)="goToSection('about')">
+        <p>About</p>
+      </a>
+    </div>
+    <div>
+      <a (click)="goToSection('experience')">
+        <p>Experience</p>
+      </a>
+    </div>
+    <div>
+      <a (click)="goToSection('contact')">
+        <p>Contact</p>
       </a>
     </div>
   </div>
