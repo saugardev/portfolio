@@ -1,23 +1,10 @@
 .outlet {
   width: 50vw;
   margin: 7rem auto 0;
-
-  &::before {
-    content: "";
-    position: fixed;
-    left: 24vw;
-    width: 1px;
-    height: 80px;
-    background-color: var(--text-grey);
-  }
 }
 
 @media (max-width: 1080px) {
   .outlet {
     width: 70vw;
-
-    &::before {
-      left: 14vw;
-    }
   }
 }
