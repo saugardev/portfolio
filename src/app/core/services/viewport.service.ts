@@ -53,6 +53,7 @@ export class ViewportService {
    * @param {string} anchor The ID of the anchor element.
    */
   public scrollToAnchor(anchor: string): void {
+    document.getElementById('about-section')?.scrollTo(0, 0);
     this.viewportScroller.scrollToAnchor(anchor);
   }
 
@@ -62,6 +63,7 @@ export class ViewportService {
    * (a tuple with x and y values).
    */
   public scrollToPosition(position: [number, number]) {
+    document.getElementById('about-section')?.scrollTo(0, 0);
     this.viewportScroller.scrollToPosition(position);
   }
 
