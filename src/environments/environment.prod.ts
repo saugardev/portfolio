@@ -1,5 +1,5 @@
 export const environment = {
-  CURRENT_EMAIL: 'saul.garces09@gmail.com',
+  CURRENT_EMAIL: 'saugardev@proton.me',
   NAVBAR_LINKS: [
     {
       tag: 'About',

@@ -22,12 +22,23 @@ export class HomeComponent implements OnInit {
    * About section element
    */
   @ViewChild('about', {static: true}) about: ElementRef<HTMLDivElement>;
+  /**
+   * Timeline element
+   */
+  @ViewChild('timeline', {static: true}) timeline: ElementRef<HTMLDivElement>;
 
   /**
    * HomeComponent ngOnInit hook
    */
   ngOnInit(): void {
-    // Hello load
+    this.initHelloAnimations();
+    this.initAboutAnimations();
+  }
+
+  /**
+   * Creates hello section animations
+   */
+  private initHelloAnimations(): void {
     gsap.from(this.hello.nativeElement, {
       duration: 0.4,
       opacity: 0,
@@ -35,7 +46,6 @@ export class HomeComponent implements OnInit {
       stagger: 0.2,
       delay: 0.75,
     });
-    // Hello animation
     gsap.to(this.hello.nativeElement.childNodes, {
       scrollTrigger: {
         trigger: this.hello.nativeElement,
@@ -43,9 +53,13 @@ export class HomeComponent implements OnInit {
         start: '130% center',
       },
       color: '#fff',
-      scale: 0.8,
+      scale: 0.85,
     });
-    // About load
+  }
+  /**
+   * Creates about section animations
+   */
+  private initAboutAnimations(): void {
     gsap.from(this.about.nativeElement.childNodes, {
       scrollTrigger: {
         trigger: this.about.nativeElement,
@@ -55,7 +69,36 @@ export class HomeComponent implements OnInit {
       duration: 0.4,
       opacity: 0,
       stagger: 0,
-      scale: 0.8,
+      scale: 0.85,
+    });
+    gsap.from(this.timeline.nativeElement, {
+      scrollTrigger: {
+        trigger: this.timeline.nativeElement,
+        scrub: true,
+        end: '20% center',
+      },
+      opacity: 0,
+      x: 300,
+      scale: 0.75,
+    });
+    gsap.to(this.about.nativeElement.childNodes, {
+      scrollTrigger: {
+        trigger: this.about.nativeElement,
+        scrub: true,
+        start: '230% center',
+      },
+      color: '#fff',
+      duration: 0.5,
+      scale: 0.85,
+    });
+    gsap.to(this.timeline.nativeElement, {
+      scrollTrigger: {
+        trigger: this.timeline.nativeElement,
+        scrub: true,
+        start: '80% center',
+      },
+      opacity: 0,
+      scale: 0.85,
     });
   }
 }

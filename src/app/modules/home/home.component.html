@@ -11,25 +11,27 @@
   <app-arrow class="center" sectionId="about"></app-arrow>
 </div>
 
-<section>
-  <div #about>
-    <h2 class="subtitle" id="about">About me</h2>
-    <p class="content paragraph spacer-s">
-      I'm a highly motivated software developer and computer engineering student with a strong foundation in programming principles and software. 
-      I'm proficient with web development frameworks and Linux environments.
-      The last few months I have been interested in blockchain applications development.
-    </p>
-    <div class="spacer">
+<section id="about-section">
+  <div>
+    <div #about>
+      <h2 class="subtitle" id="about">About me</h2>
+      <p class="content paragraph spacer-s">
+        I'm a highly motivated software developer and computer engineering student with a strong foundation in programming principles and software. 
+        I'm proficient with web development frameworks and Linux environments.
+        The last few months I have been interested in blockchain applications development.
+      </p>
+    </div>
+    <div class="spacer" #timeline>
       <app-vertical-display></app-vertical-display>
     </div>
   </div>
 </section>
 <div class="arrow-spacer">
-  <app-arrow sectionId="experience"></app-arrow>
-  <app-arrow></app-arrow>
+  <!-- <app-arrow sectionId="experience"></app-arrow> -->
+  <app-arrow class="reverse"></app-arrow>
 </div>
 
-<section>
+<!-- <section>
   <div>
     <h2 class="subtitle" id="experience">Experience</h2>
   </div>
@@ -46,6 +48,6 @@
 </section>
 <div class="arrow-spacer">
   <app-arrow class="reverse" sectionId="experience"></app-arrow> 
-</div>
+</div> -->
 
 <div class="spacer"></div>
