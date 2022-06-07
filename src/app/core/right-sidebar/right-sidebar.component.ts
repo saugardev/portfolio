@@ -1,5 +1,9 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {environment} from 'src/environments/environment';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-right-sidebar',
@@ -9,7 +13,12 @@ import {environment} from 'src/environments/environment';
 /**
  * Right sidebar somponent class
  */
-export class RightSidebarComponent {
+export class RightSidebarComponent implements OnInit {
+/**
+   * Hello div element
+   */
+  @ViewChild('rightbar', {static: true}) rightbar: ElementRef<HTMLDivElement>;
+
   /**
    * Personal email to show on the right side bar.
    */
@@ -28,5 +37,25 @@ export class RightSidebarComponent {
    */
   public set email(value) {
     this._email = value;
+  }
+
+  /**
+   * RightSidebarComponent ngOnInit hook
+   */
+  ngOnInit(): void {
+    this.initAnimation();
+  }
+
+  /**
+   * Creates bar load animation
+   */
+  private initAnimation(): void {
+    gsap.from(this.rightbar.nativeElement, {
+      duration: 0.4,
+      opacity: 0,
+      y: 50,
+      stagger: 0.2,
+      delay: 0.75,
+    });
   }
 }
