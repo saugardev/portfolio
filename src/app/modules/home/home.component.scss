@@ -70,7 +70,7 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: calc(100vh - 9rem);
   overflow: auto;
   overflow-x: hidden;
   margin-top: 10vh;
@@ -100,10 +100,10 @@ section {
   }
 }
 
-.arrow-spacer {
+.arrow {
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
+  margin-right: 1px;
 
   & .center {
     margin-left: 18px;
