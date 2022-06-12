@@ -59,14 +59,14 @@ export class AppComponent implements OnInit {
       duration: 0.4,
       opacity: 0,
       stagger: 0.2,
-      delay: 1.5,
+      delay: 2.4,
     });
     gsap.to(this.load.nativeElement.childNodes, {
       duration: 0.4,
       opacity: 0,
-      scale: 0.7,
+      scale: 0.2,
       stagger: 0.2,
-      delay: 2,
+      delay: 2.5,
     });
     setTimeout(() => {
       this.load.nativeElement.remove();

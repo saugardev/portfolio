@@ -20,6 +20,10 @@ export class HomeComponent implements OnInit {
    */
   @ViewChild('hello', {static: true}) hello: ElementRef<HTMLDivElement>;
   /**
+   * Arrow div element
+   */
+  @ViewChild('arrow', {static: true}) arrow: ElementRef<HTMLDivElement>;
+  /**
    * About section element
    */
   @ViewChild('about', {static: true}) about: ElementRef<HTMLDivElement>;
@@ -43,9 +47,21 @@ export class HomeComponent implements OnInit {
     gsap.from(this.hello.nativeElement, {
       duration: 0.4,
       opacity: 0,
-      y: -20,
-      stagger: 0.2,
-      delay: environment.animationDelay + 0.75,
+      y: 40,
+      // stagger: 0.2,
+      delay: environment.animationDelay + 1.3,
+    });
+    gsap.from(this.hello.nativeElement.childNodes, {
+      duration: 0.4,
+      y: 20,
+      stagger: 0.1,
+      delay: environment.animationDelay + 1.3,
+    });
+    gsap.from(this.arrow.nativeElement, {
+      duration: 0.4,
+      opacity: 0,
+      y: 50,
+      delay: environment.animationDelay + 2.15,
     });
     gsap.to(this.hello.nativeElement.childNodes, {
       scrollTrigger: {

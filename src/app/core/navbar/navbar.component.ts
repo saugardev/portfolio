@@ -56,7 +56,6 @@ export class NavbarComponent implements OnInit {
       duration: 0.4,
       opacity: 0,
       y: -20,
-      stagger: 0.2,
       delay: environment.animationDelay + 0.5,
     });
 
@@ -64,8 +63,8 @@ export class NavbarComponent implements OnInit {
       duration: 0.4,
       opacity: 0,
       y: -20,
-      stagger: 0.2,
-      delay: environment.animationDelay + 0.75,
+      stagger: 0.1,
+      delay: environment.animationDelay + 0.9,
     });
   }
 

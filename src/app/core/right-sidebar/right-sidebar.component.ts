@@ -54,8 +54,7 @@ export class RightSidebarComponent implements OnInit {
       duration: 0.4,
       opacity: 0,
       y: 50,
-      stagger: 0.2,
-      delay: environment.animationDelay + 0.75,
+      delay: environment.animationDelay + 2.2,
     });
   }
 }

@@ -18,6 +18,10 @@ export class LeftSidebarComponent implements OnInit {
    * Hello div element
    */
   @ViewChild('leftbar', {static: true}) leftbar: ElementRef<HTMLDivElement>;
+  /**
+   * Links ul element
+   */
+  @ViewChild('links', {static: true}) links: ElementRef<HTMLDivElement>;
 
   /**
    * LeftSidebarComponent ngOnInit hook
@@ -34,8 +38,13 @@ export class LeftSidebarComponent implements OnInit {
       duration: 0.4,
       opacity: 0,
       y: 50,
-      stagger: 0.2,
-      delay: environment.animationDelay + 0.75,
+      delay: environment.animationDelay + 2.1,
+    });
+    gsap.from(this.links.nativeElement.childNodes, {
+      duration: 0.1,
+      y: 20,
+      stagger: 0.05,
+      delay: environment.animationDelay + 2,
     });
   }
 }
