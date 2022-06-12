@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import {environment} from 'src/environments/environment';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,7 +45,7 @@ export class HomeComponent implements OnInit {
       opacity: 0,
       y: -20,
       stagger: 0.2,
-      delay: 0.75,
+      delay: environment.animationDelay + 0.75,
     });
     gsap.to(this.hello.nativeElement.childNodes, {
       scrollTrigger: {
@@ -70,6 +71,7 @@ export class HomeComponent implements OnInit {
       opacity: 0,
       stagger: 0,
       scale: 0.85,
+      delay: environment.animationDelay,
     });
     gsap.from(this.timeline.nativeElement, {
       scrollTrigger: {
@@ -80,6 +82,7 @@ export class HomeComponent implements OnInit {
       opacity: 0,
       x: 300,
       scale: 0.75,
+      delay: environment.animationDelay,
     });
     gsap.to(this.about.nativeElement.childNodes, {
       scrollTrigger: {

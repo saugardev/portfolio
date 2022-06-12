@@ -14,5 +14,6 @@ export const environment = {
       url: 'contact',
     },
   ],
+  animationDelay: 3,
   production: true,
 };

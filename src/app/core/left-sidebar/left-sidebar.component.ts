@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import {environment} from 'src/environments/environment';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +35,7 @@ export class LeftSidebarComponent implements OnInit {
       opacity: 0,
       y: 50,
       stagger: 0.2,
-      delay: 0.75,
+      delay: environment.animationDelay + 0.75,
     });
   }
 }

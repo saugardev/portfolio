@@ -57,7 +57,7 @@ export class NavbarComponent implements OnInit {
       opacity: 0,
       y: -20,
       stagger: 0.2,
-      delay: 0.5,
+      delay: environment.animationDelay + 0.5,
     });
 
     gsap.from(this.navbar.nativeElement.childNodes, {
@@ -65,7 +65,7 @@ export class NavbarComponent implements OnInit {
       opacity: 0,
       y: -20,
       stagger: 0.2,
-      delay: 0.75,
+      delay: environment.animationDelay + 0.75,
     });
   }
 
